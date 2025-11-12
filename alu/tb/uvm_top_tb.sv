@@ -1,9 +1,6 @@
 `timescale 1ns/1ps
 import uvm_pkg::*;
-`include "uvm_macros.svh"
-`include "alu_driver.sv"
-`include "alu_if.sv"
-`include "alu_env.sv"
+import tb_pkg::*;
 module uvm_top_tb;
     
     reg clk;
@@ -29,6 +26,7 @@ module uvm_top_tb;
 
     initial begin
         uvm_config_db#(virtual alu_in_if)::set(null, "uvm_test_top.drv", "vif" , input_if);
+        uvm_config_db#(virtual alu_in_if)::set(null, "uvm_test_top.i_mon", "vif" , input_if);
     end
 
     initial begin

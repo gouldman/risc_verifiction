@@ -10,4 +10,11 @@ class alu_transaction extends uvm_sequence_item;
     function new(string name = "alu_transaction");
         super.new(name);
     endfunction
+
+    function void my_print();
+        $display("control is %0h", control);
+        $display("left_operand is %0h", left_operand);
+        $display("right_operand is %0h", right_operand);
+    endfunction
+        
 endclass

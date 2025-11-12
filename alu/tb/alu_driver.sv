@@ -1,6 +1,5 @@
 
 import uvm_pkg::*;
-`include "alu_transaction.sv"
 `include "uvm_macros.svh"
 class alu_driver extends uvm_driver;
     virtual alu_in_if vif;
