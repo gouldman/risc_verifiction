@@ -1,2 +1,3 @@
 # Ignore all ModelSim temporary files starting with wlft
-wlft*
+**/wlft*
+
