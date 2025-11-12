@@ -39,7 +39,7 @@ task alu_driver::main_phase(uvm_phase phase);
 endtask
 
 task alu_driver::drive_one_pkt(alu_transaction tr);
-            @(posedge uvm_top_tb.clk);
+            @(posedge vif.clk);
         vif.control <= tr.control;
         vif.left_operand <=  tr.left_operand;
         vif.right_operand <= tr.right_operand;

@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
 import uvm_pkg::*;
 import tb_pkg::*;
+     `include "alu_if.sv"
 module uvm_top_tb;
     
     reg clk;
@@ -12,7 +13,7 @@ module uvm_top_tb;
     wire overflow;
     wire zero_flag;
 
-    alu_in_if input_if();
+    alu_in_if input_if(clk);
     alu_out_if output_if();
     alu dut(
         .control(input_if.control),

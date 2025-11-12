@@ -1,4 +1,4 @@
-interface alu_in_if();
+interface alu_in_if(input clk);
     logic [3:0] control;
     logic [31:0] left_operand;
     logic [31:0] right_operand;
