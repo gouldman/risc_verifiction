@@ -26,8 +26,8 @@ module uvm_top_tb;
     );
 
     initial begin
-        uvm_config_db#(virtual alu_in_if)::set(null, "uvm_test_top.drv", "vif" , input_if);
-        uvm_config_db#(virtual alu_in_if)::set(null, "uvm_test_top.i_mon", "vif" , input_if);
+        uvm_config_db#(virtual alu_in_if)::set(null, "uvm_test_top.i_agt.drv", "vif" , input_if);
+        uvm_config_db#(virtual alu_in_if)::set(null, "uvm_test_top.i_agt.mon", "vif" , input_if);
     end
 
     initial begin

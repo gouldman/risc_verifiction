@@ -1,4 +1,3 @@
-
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 class alu_driver extends uvm_driver;
