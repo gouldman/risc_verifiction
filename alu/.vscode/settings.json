@@ -1,0 +1,3 @@
+{
+  "ctags-companion.command": "ctags -R --fields=+nKz --langmap=SystemVerilog:+.v -R rtl F:/questasim/verilog_src/uvm-1.2/src"
+}

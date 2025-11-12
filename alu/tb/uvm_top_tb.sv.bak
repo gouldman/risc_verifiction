@@ -1,0 +1,42 @@
+`timescale 1ns/1ps
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+`include "alu_driver.sv"
+module uvm_top_tb;
+    
+    reg clk;
+    reg [3:0] control;
+    reg [31:0] left_operand;
+    reg [31:0] right_operand;
+
+    wire [31:0] result;
+    wire overflow;
+    wire zero_flag;
+
+    alu dut(
+        .control(control),
+        .left_operand(left_operand),
+        .right_operand(right_operand),
+        .zero_flag(zero_flag),
+        .result(result),    
+        .overflow(overflow)
+
+    );
+
+    initial begin
+        // code without factory
+        // alu_driver drv;
+        // drv = new("drv", null);
+        // drv.main_phase(null);
+        // $finish();
+        run_test("my_driver");
+    end
+
+    initial begin
+        clk = 0;
+        forever begin
+            #100 clk = ~clk;
+        end
+    end
+
+endmodule
